@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "autoexpert": {
+      "command": "uv",
+      "args": [
+        "run",
+        "server.py"
+      ]
+    }
+  }
+}
