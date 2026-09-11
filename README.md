@@ -18,84 +18,101 @@ Base Large Language Models default to cautious, generic conversational behavior.
 
 1. **Dynamic Expert Persona Induction**: Self-selects the exact authority role required for the task (e.g., `Python > Distributed Systems Architect`) instead of static personas.
 2. **Attention Steering Preambles**: Pre-calibrates reasoning before emitting generation tokens with formal keywords, role specifications, and execution roadmaps.
-3. **Verbosity Dialing (V=0 to V=5)**: Explicit control over output density and detail.
-4. **Standardized Slash Commands**: Intuitive commands (`/help`, `/v`, `/review`, `/plan`, `/summary`, `/refactor`, `/as`, `/q`, `/steps`, `/eli5`).
-5. **Session Continuity & Source Tree Epilogues**: Turn-by-turn state tracking with standardized emoji status trees (`💾`, `⚠️`, `👻`, `✅`, `⭕️`, `🔴`) to preserve context across long-horizon sessions.
+3. **Dual Verbosity Dialing**: V=1–5 for knowledge/research depth AND V=0–3 for code engineering density — in one unified scale.
+4. **Standardized Slash Commands**: 20+ intuitive commands (`/help`, `/v`, `/review`, `/plan`, `/refactor`, `/as`, `/code`, `/eli5`, `/memory`, and more).
+5. **Session Continuity & Source Tree Epilogues**: Turn-by-turn state tracking with standardized emoji status trees (`💾`, `⚠️`, `👻`, `📦`, `✅`, `⭕`, `🔴`) to preserve context across long-horizon sessions.
 
 ---
 
-## 📚 The Two Editions
+## 📚 How to Use
 
-| Edition | Use For | Highlights | Location |
-| :--- | :--- | :--- | :--- |
-| **Standard** | General questions, research, analysis, multimodal | Strategy & Context Table, V=1–5 verbosity, research evidence mode, data analysis mode, multimodal transcription mode | [`core/standard/`](core/standard/) |
-| **Developer** | Programming, architecture, pair-coding | Pair-Programming Preamble, No-Elision Mandate, V=0–3 code verbosity, Source Tree Epilogue | [`core/developer/`](core/developer/) |
+### The Core Prompt
 
-> All legacy editions (V1 Classic, V2 Gemini REV1, specialized variants) have been consolidated into these two prompts. The originals are preserved in [`docs/legacy-editions-archive.zip`](docs/legacy-editions-archive.zip).
+Copy the system instruction from [`core/SYSTEM_PROMPT.md`](core/SYSTEM_PROMPT.md) into any AI chat interface — OpenAI, Anthropic Claude, Google Gemini, Cursor, Windsurf, or any local model.
+
+This single prompt handles **everything**: general questions, research, coding, data analysis, multimodal transcription, and technical architecture.
+
+### @Work Add-On Modules (Optional)
+
+Append one or both to the core prompt for workplace contexts:
+
+| Module | Use For | File |
+| :--- | :--- | :--- |
+| **@work** | Brand voice, word choice, email standards, PR guidelines, signature blocks | [`core/work/WORK_MODULE.md`](core/work/WORK_MODULE.md) |
+| **@work.benefits** | Benefits administration — COBRA, HSA/FSA, FMLA, open enrollment, compliance | [`core/work/WORK_BENEFITS_MODULE.md`](core/work/WORK_BENEFITS_MODULE.md) |
+
+> All legacy editions (V1 Classic, V2 Gemini REV1, specialized variants) are preserved in [`docs/legacy-editions-archive.zip`](docs/legacy-editions-archive.zip).
+
+---
 
 ## 📁 Repository Structure
+
 ```text
 .
 |-- core
-|   |-- standard              # ← General use (research, analysis, multimodal, Q&A)
-|   `-- developer             # ← Programming (pair-coding, architecture)
+|   |-- SYSTEM_PROMPT.md           # ← The unified AutoExpert prompt (use this)
+|   `-- work
+|       |-- WORK_MODULE.md         # ← @work: brand voice, comms, PR
+|       `-- WORK_BENEFITS_MODULE.md # ← @work.benefits: HR & benefits admin
 |-- formats
-|   |-- agent_skills          # Skill files for Antigravity, Claude Code, Open Interpreter
-|   `-- system_prompts        # Portable copies of core/ prompts
+|   |-- agent_skills               # Skill files for Antigravity, Claude Code, Open Interpreter
+|   `-- system_prompts             # Portable copy of core prompt
 |-- skills
-|   `-- autoexpert            # Antigravity agent skill definition
-|-- docs                      # Master compendium, omnibus reference, legacy archive
+|   `-- autoexpert                 # Antigravity agent skill definition
+|-- docs                           # Master compendium, omnibus reference, legacy archive
 |-- tests
 `-- tools
-    |-- autodev               # CLI: stash, recall, preamble, lint
-    |-- mcp_server            # FastMCP server
-    `-- prompt_compiler       # Multi-model prompt generator
+    |-- autodev                    # CLI: stash, recall, preamble, lint
+    |-- mcp_server                 # FastMCP server
+    `-- prompt_compiler            # Multi-model prompt generator
 ```
 
 ---
 
 ## ⚡️ Quick Start
 
-### 1. Choose Your Prompt
-Copy the system instruction from the edition that fits your use case:
-- **General use** → [`core/standard/SYSTEM_PROMPT.md`](core/standard/SYSTEM_PROMPT.md) — research, analysis, writing, multimodal, Q&A
-- **Programming** → [`core/developer/SYSTEM_PROMPT.md`](core/developer/SYSTEM_PROMPT.md) — coding, architecture, pair-programming
+### 1. Verbosity Dialing Cheat Sheet
 
-### 2. Verbosity Dialing Cheat Sheet
-Prefix your queries with `V=[0-5]`:
-- **V=0 (Code Golf)**: Raw code only, zero commentary or conversational padding.
-- **V=1 (Terse)**: High signal-to-noise, minimal implementation notes.
-- **V=2 (Concise)**: Direct answers with clean logic explanations.
-- **V=3 (Balanced - Default)**: Standard professional depth with clear rationale.
-- **V=4 (Comprehensive)**: Detailed technical breakdowns with edge cases.
-- **V=5 (Exhaustive)**: Deep dive with multi-perspective breakdown and multi-turn staging.
+**Knowledge & Research** — prefix with `V=[1-5]`:
 
-### 3. Developer Mandates
-- **File Path Headers**: Every code block must begin with an explicit file path comment (`# path/to/file.py`).
-- **Strict No-Elision Mandate**: Never use placeholder comments like `// ... rest of code unchanged ...`. Always output complete, runnable code.
+| Level | Mode | Depth |
+| :---: | :--- | :--- |
+| V=1 | Micro / Terse | Key bullet points only |
+| V=2 | Concise | Executive summary |
+| V=3 | Standard (default) | Balanced with trade-offs |
+| V=4 | Technical Deep Dive | Edge cases, failure modes |
+| V=5 | Exhaustive Academic | Multi-turn, benchmarks, proofs |
+
+**Code & Engineering** — prefix with `V=[0-3]`:
+
+| Level | Mode | Output |
+| :---: | :--- | :--- |
+| V=0 | Code Golf | Raw code, zero commentary |
+| V=1 | Concise | Minimal implementation notes |
+| V=2 | Simple (default) | Professional with documentation |
+| V=3 | Verbose DRY | Modular, docstrings, error boundaries |
+
+### 2. Key Engineering Mandates
+- **File Path Headers**: Every code block starts with `// path/to/file.ext` or `# path/to/file.py`.
+- **No-Elision Mandate**: Never `// ... rest unchanged ...`. Always complete, runnable code.
+- **ISO Standards**: Dates as `YYYY-MM-DD`, currencies as ISO 4217 (`USD`), measurements in SI units.
+
+### 3. Slash Commands at a Glance
+`/help` · `/v [0-5]` · `/as [Role]` · `/review` · `/plan` · `/summary` · `/refactor` · `/q` · `/more` · `/links` · `/alt` · `/arg` · `/redo` · `/steps` · `/table` · `/code [lang]` · `/eli5` · `/memory` · `/stash` · `/recall`
 
 ---
 
 ## 🛠 Tools & Automation
 
 ### AutoDev CLI
-A modernized CLI for stashing snippets, checking standards, and generating preambles:
 ```bash
-# Stash a snippet or decision
 python tools/autodev/cli.py stash auth_decision "Use JWT with RS256 rotation"
-
-# Recall stashed items
 python tools/autodev/cli.py recall auth_decision
-
-# Check code for No-Elision violations
 python tools/autodev/cli.py lint path/to/file.py
-
-# Generate a preamble
 python tools/autodev/cli.py preamble --lang TypeScript --role "Principal Systems Architect" -v V=4
 ```
 
 ### Prompt Compiler
-Compile tailored AutoExpert prompts for any model:
 ```bash
 python tools/prompt_compiler/compiler.py --target claude -v 4 --specialist "Distributed Systems Architect"
 ```
@@ -105,7 +122,7 @@ python tools/prompt_compiler/compiler.py --target claude -v 4 --specialist "Dist
 ## 🙏 Credits & Acknowledgments
 
 - **Dustin Miller ([@spdustin](https://github.com/spdustin))**: Creator of the original AutoExpert framework, `autodev.py`, and the revolutionary prompt engineering methodologies that made this project possible.
-- **Sean Tyler ([@seanbuilds](https://github.com/seanbuilds))**: Modernization, Gemini REV1 adaptations, Universal Edition, and Agentic skill integration.
+- **Sean Tyler ([@seanbuilds](https://github.com/seanbuilds))**: Modernization, universal unification, and agentic skill integration.
 
 Read the full history and attribution in [CREDITS.md](CREDITS.md).
 
