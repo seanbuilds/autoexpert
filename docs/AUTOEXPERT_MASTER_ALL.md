@@ -156,7 +156,7 @@ Source material for quick-access snippets, hybrid domain integrations, and legac
 
 ## Part II: Version 1 — AutoExpert Standard & Developer Editions (Canonical Dustin Miller)
 
-### Source File: `editions/v1-ai-model-classic/standard/README.md`
+### Source File: `editions/v1-classic/standard/README.md`
 
 # AutoExpert ("Standard" Edition) v5
 by Dustin Miller • [Reddit](https://www.reddit.com/u/spdustin) • [Substack](https://spdustin.substack.com)
@@ -168,8 +168,8 @@ _**Want to support these free prompts? [My Substack](https://spdustin.substack.c
 ***
 
 **Check it out in action, then keep reading:**
-- [V=5 history of quantum mechanics](https://chat.openai.com/share/7a3c0c73-c811-4976-a98b-d424322bec6f)
-- [Interpreting bloodwork results](https://chat.openai.com/share/606f8074-2ed7-49a3-a56a-faa7ecd671f7) (using a [fictional example](https://functionalhealthclinic.co.uk/functional-blood-chemistry-analysis/))
+- [V=5 history of quantum mechanics](https://chat.openai.com/share/7a3c0c73-c811-4976-a98b-d424322bec6f) (Original demo links, may no longer be active) (Original demo links, may no longer be active)
+- [Interpreting bloodwork results](https://chat.openai.com/share/606f8074-2ed7-49a3-a56a-faa7ecd671f7) (Original demo links, may no longer be active) (Original demo links, may no longer be active) (using a [fictional example](https://functionalhealthclinic.co.uk/functional-blood-chemistry-analysis/))
 
 ***
 
@@ -318,7 +318,7 @@ AutoExpert ("Standard" Edition) is intended for use in the AutoExpert web interf
 7. Try it out!
 
 
-### Source File: `editions/v1-ai-model-classic/standard/ai-model_GPT4__custom_instructions.md`
+### Source File: `editions/v1-classic/standard/ai-model_GPT4__custom_instructions.md`
 
 Step 1: Generate a Markdown table:
 |Expert(s)|{list; of; EXPERTs}|
@@ -349,7 +349,7 @@ Step 5: IF (another response will be needed) {
 }
 
 
-### Source File: `editions/v1-ai-model-classic/developer/README.md`
+### Source File: `editions/v1-classic/developer/README.md`
 
 # AutoExpert (Developer Edition)
 by Dustin Miller • [Reddit](https://www.reddit.com/u/spdustin) • [Substack](https://spdustin.substack.com)
@@ -362,8 +362,8 @@ _**Want to support these free prompts? [My Substack](https://spdustin.substack.c
 > This requires a AutoExpert professional subscription, as it needs both GPT-4 _and_ **Advanced Data Analysis**!
 
 > [!NOTE]
-> - [See `/memory` in action](https://chat.openai.com/share/0f707aba-3cb4-4b35-9c8e-48a4d351b996)
-> - [Check out restoring into a new session!](https://chat.openai.com/share/edee3207-0937-47c5-84de-418912262262)
+> - [See `/memory` in action](https://chat.openai.com/share/0f707aba-3cb4-4b35-9c8e-48a4d351b996) (Original demo links, may no longer be active) (Original demo links, may no longer be active)
+> - [Check out restoring into a new session!](https://chat.openai.com/share/edee3207-0937-47c5-84de-418912262262) (Original demo links, may no longer be active) (Original demo links, may no longer be active)
 
 # Table of Contents
 - [Usage](#usage)
@@ -485,7 +485,7 @@ AutoExpert (Developer Edition) is intended for use in the AutoExpert web interfa
 6. If all went well, you should see a heading "AutoExpert (Developer Edition)" along with an introduction to the tool
 
 
-### Source File: `editions/v1-ai-model-classic/developer/ai-model__custom_instructions.md`
+### Source File: `editions/v1-classic/developer/ai-model__custom_instructions.md`
 
 VERBOSITY: I may use V=[0-3] to define code detail:
 - V=0 code golf
@@ -525,7 +525,7 @@ Briefly list your step-by-step plan, including any components that won't be addr
 **Next Task**: NOT finished=short description of next task FINISHED=list EXPERT SPECIALIST suggestions for enhancements/performance improvements.
 """
 
-### Source File: `editions/v1-ai-model-classic/developer/example_memory.yml`
+### Source File: `editions/v1-classic/developer/example_memory.yml`
 
 memory:
 - timestamp: '2023-09-30T21:49:05.147752'

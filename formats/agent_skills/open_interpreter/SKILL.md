@@ -1,3 +1,7 @@
+# AutoExpert Skill: Open Interpreter Edition
+
+Optimized for Open Interpreter local agent workflows.
+
 ---
 name: autoexpert
 description: >-

@@ -29,7 +29,7 @@ Here's the list of "Custom GPTs" currently available as of this commit date. The
 | --- | --- | --- | --- |
 | [DALL·E](https://chat.openai.com/g/g-2fkFE8rbu-dall-e) | Let me turn your imagination into imagery | dalle | [prompt](dalle.md)|
 | [Data Analysis](https://chat.openai.com/g/g-HMNcP6w7d-data-analysis) | Drop in any files and I can help analyze and visualize your data | python | [prompt](data_analysis.md) |
-| [AutoExpert Classic](https://chat.openai.com/g/g-YyyyMT9XH-ai-model-classic) | The latest version of GPT-4 with no additional capabilities | | [prompt](ai-model_classic.md) |
+| [AutoExpert Classic](https://chat.openai.com/g/g-YyyyMT9XH-ai-model-classic) | The latest version of GPT-4 with no additional capabilities | | [prompt](classic_classic.md) |
 | [Game Time](https://chat.openai.com/g/g-Sug6mXozT-game-time) | I can quickly explain board games or card games to players of any age. Let the games begin! | browser | [prompt](game_time.md) |
 | [The Negotiator](https://chat.openai.com/g/g-TTTAK9GuS-the-negotiator) | I'll help you advocate for yourself and get better outcomes. Become a great negotiator. | | [prompt](the_negotiator.md) |
 | [Creative Writing Coach](https://chat.openai.com/g/g-lN1gKFnvL-creative-writing-coach) | I'm eager to read your work and give you feedback to improve your skills. | | [prompt](creative_writing_coach.md) |

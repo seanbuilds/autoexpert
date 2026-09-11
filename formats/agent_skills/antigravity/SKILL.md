@@ -1,3 +1,7 @@
+# AutoExpert Skill: Google Antigravity Edition
+
+Canonical Antigravity agent skill.
+
 ---
 name: autoexpert
 description: >-

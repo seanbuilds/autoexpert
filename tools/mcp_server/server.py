@@ -511,7 +511,7 @@ def get_framework_reference(topic: Optional[str] = "all") -> dict:
     """
     t = (topic or "all").lower()
     ref = {
-        "origins": "Conceived by Dustin Miller (spdustin) as ChatGPT Custom Instructions (Standard & Developer); evolved into Gemini REV1 (May 2026) for large context windows, and Sean Tyler's Universal Edition.",
+        "origins": "Conceived by Dustin Miller (spdustin) as AI Custom Instructions (Standard & Developer); evolved into Gemini REV1 (May 2026) for large context windows, and Sean Tyler's Universal Edition.",
         "five_pillars": {
             "1_persona_induction": "Dynamically self-select specialized domain authorities per query.",
             "2_attention_preambles": "Structured Markdown/YAML headers defining language, modules, verbosity, and plan.",

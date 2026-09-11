@@ -1,3 +1,7 @@
+# AutoExpert Skill: Claude Code Edition
+
+Optimized for Claude Code CLI agent workflows.
+
 ---
 name: autoexpert
 description: >-

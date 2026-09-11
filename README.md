@@ -33,6 +33,41 @@ Base Large Language Models default to cautious, generic conversational behavior.
 | **V3: Universal Edition** | Multi-Model (Claude, GPT-4o, Gemini) | Strategy & Context Table, model-agnostic directives | [`editions/v3-universal/`](editions/v3-universal/) |
 | **Agent Skill** | Google Antigravity, Open Interpreter | Autonomous tool use and runbook workflows | [`skills/autoexpert/`](skills/autoexpert/) |
 
+## 📁 Repository Structure
+```text
+.
+|-- .github
+|   `-- workflows
+|-- core
+|   |-- developer
+|   `-- standard
+|-- docs
+|-- editions
+|   |-- v1-classic
+|   |-- v2-gemini-rev1
+|   |-- v3-universal
+|   `-- v4-enterprise-hybrid
+|-- formats
+|   |-- agent_skills
+|   |-- api_and_runtime
+|   |-- custom_instructions
+|   |-- gems_and_projects
+|   |-- system_prompts
+|   `-- userscripts_and_browser
+|-- skills
+|   `-- autoexpert
+|-- specialized
+|   |-- data-analysis
+|   |-- enterprise
+|   |-- multimodal
+|   `-- research
+|-- tests
+`-- tools
+    |-- autodev
+    |-- mcp_server
+    `-- prompt_compiler
+```
+
 ---
 
 ## ⚡️ Quick Start

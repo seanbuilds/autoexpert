@@ -9,8 +9,8 @@ _**Want to support these free prompts? [My Substack](https://spdustin.substack.c
 > This requires a AutoExpert professional subscription, as it needs both GPT-4 _and_ **Advanced Data Analysis**!
 
 > [!NOTE]
-> - [See `/memory` in action](https://chat.openai.com/share/0f707aba-3cb4-4b35-9c8e-48a4d351b996)
-> - [Check out restoring into a new session!](https://chat.openai.com/share/edee3207-0937-47c5-84de-418912262262)
+> - [See `/memory` in action](https://chat.openai.com/share/0f707aba-3cb4-4b35-9c8e-48a4d351b996) (Original demo links, may no longer be active) (Original demo links, may no longer be active)
+> - [Check out restoring into a new session!](https://chat.openai.com/share/edee3207-0937-47c5-84de-418912262262) (Original demo links, may no longer be active) (Original demo links, may no longer be active)
 
 # Table of Contents
 - [Usage](#usage)
