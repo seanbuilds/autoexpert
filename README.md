@@ -31,7 +31,7 @@ Base Large Language Models default to cautious, generic conversational behavior.
 | **Standard** | General questions, research, analysis, multimodal | Strategy & Context Table, V=1–5 verbosity, research evidence mode, data analysis mode, multimodal transcription mode | [`core/standard/`](core/standard/) |
 | **Developer** | Programming, architecture, pair-coding | Pair-Programming Preamble, No-Elision Mandate, V=0–3 code verbosity, Source Tree Epilogue | [`core/developer/`](core/developer/) |
 
-> All legacy editions (V1 Classic, V2 Gemini REV1, specialized variants) have been consolidated into these two prompts. The originals are preserved in [`docs/pre-consolidation-archive.zip`](docs/pre-consolidation-archive.zip).
+> All legacy editions (V1 Classic, V2 Gemini REV1, specialized variants) have been consolidated into these two prompts. The originals are preserved in [`docs/legacy-editions-archive.zip`](docs/legacy-editions-archive.zip).
 
 ## 📁 Repository Structure
 ```text
