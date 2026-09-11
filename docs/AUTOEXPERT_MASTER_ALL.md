@@ -168,8 +168,8 @@ _**Want to support these free prompts? [My Substack](https://spdustin.substack.c
 ***
 
 **Check it out in action, then keep reading:**
-- [V=5 history of quantum mechanics](https://chat.openai.com/share/7a3c0c73-c811-4976-a98b-d424322bec6f) (Original demo links, may no longer be active) (Original demo links, may no longer be active)
-- [Interpreting bloodwork results](https://chat.openai.com/share/606f8074-2ed7-49a3-a56a-faa7ecd671f7) (Original demo links, may no longer be active) (Original demo links, may no longer be active) (using a [fictional example](https://functionalhealthclinic.co.uk/functional-blood-chemistry-analysis/))
+- [V=5 history of quantum mechanics](https://chat.openai.com/share/7a3c0c73-c811-4976-a98b-d424322bec6f) (Original demo links, may no longer be active)
+- [Interpreting bloodwork results](https://chat.openai.com/share/606f8074-2ed7-49a3-a56a-faa7ecd671f7) (Original demo links, may no longer be active) (using a [fictional example](https://functionalhealthclinic.co.uk/functional-blood-chemistry-analysis/))
 
 ***
 
@@ -362,8 +362,8 @@ _**Want to support these free prompts? [My Substack](https://spdustin.substack.c
 > This requires a AutoExpert professional subscription, as it needs both GPT-4 _and_ **Advanced Data Analysis**!
 
 > [!NOTE]
-> - [See `/memory` in action](https://chat.openai.com/share/0f707aba-3cb4-4b35-9c8e-48a4d351b996) (Original demo links, may no longer be active) (Original demo links, may no longer be active)
-> - [Check out restoring into a new session!](https://chat.openai.com/share/edee3207-0937-47c5-84de-418912262262) (Original demo links, may no longer be active) (Original demo links, may no longer be active)
+> - [See `/memory` in action](https://chat.openai.com/share/0f707aba-3cb4-4b35-9c8e-48a4d351b996) (Original demo links, may no longer be active)
+> - [Check out restoring into a new session!](https://chat.openai.com/share/edee3207-0937-47c5-84de-418912262262) (Original demo links, may no longer be active)
 
 # Table of Contents
 - [Usage](#usage)

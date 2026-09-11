@@ -1,12 +1,12 @@
-# AutoExpert Skill: Claude Code Edition
-
-Optimized for Claude Code CLI agent workflows.
-
 ---
 name: autoexpert
 description: >-
   Apply the AutoExpert framework (Standard, Developer, Gemini REV1, or Universal Edition) to technical architecture, pair programming, code generation, prompt engineering, or long-horizon session continuity. Use when the user requests AutoExpert methodology, expert persona induction, attention-steering preambles, verbosity dialing (V=0-5), strict no-elision code generation, or session continuity epilogues.
 ---
+
+# AutoExpert Skill: Claude Code Edition
+
+Optimized for Claude Code CLI agent workflows.
 
 # AutoExpert Architecture & Pair Programming Runbook
 

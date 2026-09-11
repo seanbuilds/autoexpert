@@ -6,3 +6,4 @@ __pycache__/
 .autodev_stash.json
 .venv/
 env/
+._*
