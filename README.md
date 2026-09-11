@@ -24,56 +24,58 @@ Base Large Language Models default to cautious, generic conversational behavior.
 
 ---
 
-## 📚 Editions Included
+## 📚 Editions
 
-| Edition | Primary Target | Highlights | Directory |
+### Core Prompts (Use These)
+
+| Edition | Use For | Highlights | Location |
 | :--- | :--- | :--- | :--- |
-| **V1: AutoExpert Classic** | GPT-3.5, GPT-4 | Canonical spdustin instructions, `autodev.py`, userscripts | [`editions/v1-classic/`](editions/v1-classic/) |
-| **V2: Gemini REV1** | Gemini 1.5/2.0 Pro | 1M–2M context optimization, Gems suite, Google grounding | [`editions/v2-gemini-rev1/`](editions/v2-gemini-rev1/) |
-| **V3: Universal Edition** | Multi-Model (Claude, GPT-4o, Gemini) | Strategy & Context Table, model-agnostic directives | [`editions/v3-universal/`](editions/v3-universal/) |
-| **Agent Skill** | Google Antigravity, Open Interpreter | Autonomous tool use and runbook workflows | [`skills/autoexpert/`](skills/autoexpert/) |
+| **Standard** | General questions, research, analysis, multimodal | Strategy & Context Table, V=1–5 verbosity, research evidence mode, data analysis mode, multimodal transcription mode | [`core/standard/`](core/standard/) |
+| **Developer** | Programming, architecture, pair-coding | Pair-Programming Preamble, No-Elision Mandate, V=0–3 code verbosity, Source Tree Epilogue | [`core/developer/`](core/developer/) |
+
+### Heritage Editions (Historical Reference)
+
+| Edition | Original Target | Directory |
+| :--- | :--- | :--- |
+| V1: AutoExpert Classic | GPT-3.5, GPT-4 (canonical spdustin) | [`editions/v1-classic/`](editions/v1-classic/) |
+| V2: Gemini REV1 | Gemini 1.5/2.0 Pro | [`editions/v2-gemini-rev1/`](editions/v2-gemini-rev1/) |
+| Agent Skill | Google Antigravity, Open Interpreter | [`skills/autoexpert/`](skills/autoexpert/) |
 
 ## 📁 Repository Structure
 ```text
 .
-|-- .github
-|   `-- workflows
 |-- core
-|   |-- developer
-|   `-- standard
-|-- docs
+|   |-- standard          # ← General questions, research, analysis, multimodal
+|   `-- developer         # ← Programming, architecture, pair-coding
 |-- editions
-|   |-- v1-classic
-|   |-- v2-gemini-rev1
-|   |-- v3-universal
+|   |-- v1-classic        # Heritage: original spdustin GPT-3.5/4 edition
+|   |-- v2-gemini-rev1    # Heritage: Gemini 1.5/2.0 Pro adaptation
 |   `-- v4-enterprise-hybrid
 |-- formats
-|   |-- agent_skills
+|   |-- agent_skills      # Per-agent-framework skill files
 |   |-- api_and_runtime
 |   |-- custom_instructions
 |   |-- gems_and_projects
-|   |-- system_prompts
+|   |-- system_prompts    # Copies of core/ for self-contained distribution
 |   `-- userscripts_and_browser
 |-- skills
-|   `-- autoexpert
-|-- specialized
-|   |-- data-analysis
-|   |-- enterprise
-|   |-- multimodal
-|   `-- research
+|   `-- autoexpert        # Antigravity agent skill
+|-- docs                  # Master compendium & omnibus reference
 |-- tests
 `-- tools
-    |-- autodev
-    |-- mcp_server
-    `-- prompt_compiler
+    |-- autodev           # CLI: stash, recall, preamble, lint
+    |-- mcp_server        # FastMCP server
+    `-- prompt_compiler   # Multi-model prompt generator
 ```
 
 ---
 
 ## ⚡️ Quick Start
 
-### 1. Universal System Prompt
-To use AutoExpert in any AI chat interface (OpenAI, Anthropic Claude, Google Gemini, Cursor, LibreChat), copy the prompt from [`editions/v3-universal/system-prompt.md`](editions/v3-universal/system-prompt.md) into your system instructions.
+### 1. Choose Your Prompt
+Copy the system instruction from the edition that fits your use case:
+- **General use** → [`core/standard/SYSTEM_PROMPT.md`](core/standard/SYSTEM_PROMPT.md) — research, analysis, writing, multimodal, Q&A
+- **Programming** → [`core/developer/SYSTEM_PROMPT.md`](core/developer/SYSTEM_PROMPT.md) — coding, architecture, pair-programming
 
 ### 2. Verbosity Dialing Cheat Sheet
 Prefix your queries with `V=[0-5]`:
