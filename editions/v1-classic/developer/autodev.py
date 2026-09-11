@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
 """
-Title: ChatGPT AutoExpert (Developer Edition) — environment setup
+Title: AutoExpert (Developer Edition) — environment setup
 Module Name: autodev.py
 Description:
-    This script initializes a custom set of functions for ChatGPT's Advanced
+    This script initializes a custom set of functions for AutoExpert's Advanced
     Data Analysis Python sandbox environment, accessible as /slash commands.
     "/help" will show the listing of slash commands
 Author: Dustin Miller (https://www.github.com/spdustin/)
@@ -17,7 +17,7 @@ Notes:
 """
 
 # These imports are mostly unused here, but are commonly needed in the sandbox.
-# ChatGPT often forgets to import them, so we'll try to import them for it.
+# AutoExpert often forgets to import them, so we'll try to import them for it.
 import ast
 import inspect
 import json
@@ -129,7 +129,7 @@ class AutoDev:
             f"""
             1. delete /mnt/data/tags
             2. `%sx ctags -R --sort=yes -o /mnt/data/tags /mnt/data/`
-            3. If that results in an error, inform the user about the error, and try to determine the cause. Suggest the user visits the [AutoExpert Issues](https://github.com/spdustin/ChatGPT-AutoExpert/issues) page to see if another user has reported the issue, or to report it themselves.
+            3. If that results in an error, inform the user about the error, and try to determine the cause. Suggest the user visits the [AutoExpert Issues](https://github.com/spdustin/AutoExpert-AutoExpert/issues) page to see if another user has reported the issue, or to report it themselves.
             4. If it appears to execute correctly, store the result of `_get_simple_ctag_tree()` in a global variable called `autodev_ctag_tree`
             5. note the value of `autodev_ctag_tree`, and when finishing this task, include Step 3 of the ASSISTANT_RESPONSE, being sure to MERGE/UPDATE the existing **Source Tree** with any new information in `autodev_ctag_tree`
             """
@@ -207,7 +207,7 @@ def _get_methods_and_docstrings(cls):
 
 def _slash_command(command: str) -> None:
     """
-    INTERNAL: Used by ChatGPT to execute a user's slash command
+    INTERNAL: Used by AutoExpert to execute a user's slash command
     """
     command = command.replace("/", "")
     command_func = getattr(AutoDev, command, None)
@@ -283,7 +283,7 @@ def _setup(character_choice: int = 0):
     """
     INTERNAL: Runs the first time this script is executed. Selects a "character"
     from a constant array, defaulting to the first character in the array.
-    It then instructs ChatGPT on how to present the initial "welcome" chat to
+    It then instructs AutoExpert on how to present the initial "welcome" chat to
     the user.
     """
     character = CHARACTERS[character_choice]
@@ -294,7 +294,7 @@ def _setup(character_choice: int = 0):
 
         Then, return the following message verbatim:
         """
-        ## ChatGPT AutoExpert (Developer Edition), version {AUTODEV_VERSION}
+        ## AutoExpert (Developer Edition), version {AUTODEV_VERSION}
         ### by Dustin Miller • [Reddit](https://www.reddit.com/u/spdustin) • [Substack](https://spdustin.substack.com)
         > License: [Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/)
         """
@@ -325,14 +325,14 @@ def _setup(character_choice: int = 0):
         """
         **Take note**:
 
-        These new functions might be useful, but ChatGPT (and this tool) isn't guaranteed to work perfectly 100% of the time.
+        These new functions might be useful, but AutoExpert (and this tool) isn't guaranteed to work perfectly 100% of the time.
         [[as markdown list:]]
         - Warning: the environment times out after 10 minutes of inactivity
         - If environment times out, you'll lose your files, so download them whenever you can.
         - You can use `/memory` to save files and memory.
         - If a file is _saved_ in the sandbox, that's it. Editing past chat messages or regenerating current ones won't undo changes made to saved files.
-        - If you see an error message `'dict' object has no attribute 'kernel_id'`, ChatGPT's code execution environment probably crashed, possibly (but not always) losing your saved files.
-        - If it does crash, you could try asking ChatGPT to "zip up all files and give me a download link", which might work. Sometimes.
+        - If you see an error message `'dict' object has no attribute 'kernel_id'`, AutoExpert's code execution environment probably crashed, possibly (but not always) losing your saved files.
+        - If it does crash, you could try asking AutoExpert to "zip up all files and give me a download link", which might work. Sometimes.
 
         > **PS**: _You might want to change the title of this chat._
         """

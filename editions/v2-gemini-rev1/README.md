@@ -3,7 +3,7 @@
 
 ## Overview & Architectural Shift
 
-The transition to AutoExpert Version 2 represents a fundamental architectural shift occurring in May 2026, moving away from the restricted ChatGPT sandbox tools toward Gemini-native capabilities. This evolution leverages the massive 1M-2M token context windows, allowing for unprecedented depth in reasoning and information retention.
+The transition to AutoExpert Version 2 represents a fundamental architectural shift occurring in May 2026, moving away from the restricted AutoExpert sandbox tools toward Gemini-native capabilities. This evolution leverages the massive 1M-2M token context windows, allowing for unprecedented depth in reasoning and information retention.
 
 Key technological advancements include native Google Search grounding, which ensures all outputs are anchored in real-time data, and the implementation of persistent Gems. The system has been restructured from legacy monolithic files into a clean, modular directory system designed for high-efficiency prompt management:
 

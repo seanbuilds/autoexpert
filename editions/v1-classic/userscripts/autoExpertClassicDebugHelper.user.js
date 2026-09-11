@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name        ChatGPT Debug Helper 1.3.1
+// @name        AutoExpert Debug Helper 1.3.1
 // @author      Dustin Miller <dustin@llmimagineers.com>
 // @namespace   https://spdustin.substack.com
 // @version     1.3.1
-// @description Adds some helpful debugging tools to the ChatGPT UI
+// @description Adds some helpful debugging tools to the AutoExpert UI
 // @run-at      document-idle
 // @match       https://chat.openai.com/*
 // @grant       none
@@ -1871,7 +1871,7 @@ var hljs = (function () {
     })();
     hljs.registerLanguage('plaintext', t);
   })();
-hljs.registerLanguage('chatgpt_tools', function (hljs) {
+hljs.registerLanguage('ai-model_tools', function (hljs) {
   const FUNCTION_NAMES = 'search back scroll quote_lines open_url click text2im'; // Add more function names as needed
 
   return {

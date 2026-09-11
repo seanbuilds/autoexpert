@@ -10,22 +10,22 @@
   const autoExpertPaths = [{
     "title": "Standard v5",
     "id": "std_5",
-    "user_url": "https://raw.githubusercontent.com/spdustin/ChatGPT-AutoExpert/dev__pre-eval/standard-edition/chatgpt_GPT4__about_me.md",
-    "model_url": "https://raw.githubusercontent.com/spdustin/ChatGPT-AutoExpert/dev__pre-eval/standard-edition/chatgpt_GPT4__custom_instructions.md",
+    "user_url": "https://raw.githubusercontent.com/spdustin/AutoExpert-AutoExpert/dev__pre-eval/standard-edition/ai-model_GPT4__about_me.md",
+    "model_url": "https://raw.githubusercontent.com/spdustin/AutoExpert-AutoExpert/dev__pre-eval/standard-edition/ai-model_GPT4__custom_instructions.md",
     "emoji": "🧠"
   },
   {
     "title": "Dev v5",
     "id": "dev_5",
-    "user_url": "https://raw.githubusercontent.com/spdustin/ChatGPT-AutoExpert/dev__pre-eval/developer-edition/chatgpt__about_me.md",
-    "model_url": "https://raw.githubusercontent.com/spdustin/ChatGPT-AutoExpert/dev__pre-eval/developer-edition/chatgpt__custom_instructions.md",
+    "user_url": "https://raw.githubusercontent.com/spdustin/AutoExpert-AutoExpert/dev__pre-eval/developer-edition/ai-model__about_me.md",
+    "model_url": "https://raw.githubusercontent.com/spdustin/AutoExpert-AutoExpert/dev__pre-eval/developer-edition/ai-model__custom_instructions.md",
     "emoji": "💻"
   },
   {
     "title": "Voice V5",
     "id": "voice_5",
-    "user_url": "https://raw.githubusercontent.com/spdustin/ChatGPT-AutoExpert/dev__voice_edition/voice-edition/chatgpt_GPT4_voice__about_me.md",
-    "model_url": "https://raw.githubusercontent.com/spdustin/ChatGPT-AutoExpert/dev__voice_edition/voice-edition/chatgpt_GPT4_voice__custom_instructions.md",
+    "user_url": "https://raw.githubusercontent.com/spdustin/AutoExpert-AutoExpert/dev__voice_edition/voice-edition/ai-model_GPT4_voice__about_me.md",
+    "model_url": "https://raw.githubusercontent.com/spdustin/AutoExpert-AutoExpert/dev__voice_edition/voice-edition/ai-model_GPT4_voice__custom_instructions.md",
     "emoji": "💬"
   }
   ];

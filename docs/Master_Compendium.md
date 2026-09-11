@@ -3,7 +3,7 @@
 
 ## Executive Summary
 
-The AutoExpert framework represents a sophisticated leap in prompt engineering architecture, designed to maximize the utility and precision of Large Language Models (LLMs). Originally conceived by Dustin Miller (spdustin) as ChatGPT Custom Instructions in both Standard and Developer Editions, the architecture has undergone significant evolution.
+The AutoExpert framework represents a sophisticated leap in prompt engineering architecture, designed to maximize the utility and precision of Large Language Models (LLMs). Originally conceived by Dustin Miller (spdustin) as AutoExpert Custom Instructions in both Standard and Developer Editions, the architecture has undergone significant evolution.
 
 Following its initial success, the framework was adapted into a Gemini native port to leverage Google's ecosystem. A pivotal milestone occurred with the May 2026 REV1 restructure, which optimized the system for massive context windows. Further advancements were introduced through Sean Tyler's Universal Edition, alongside various domain-specific hybrid integrations, ensuring the framework remains the gold standard for dynamic, expert-level AI interactions.
 
@@ -13,7 +13,7 @@ Following its initial success, the framework was adapted into a Gemini native po
 
 | Version Name / Generation | Primary Environment & Models | Core Files & Storage Locations | Key Innovations & Mechanics | Compendium Link |
 | --- | --- | --- | --- | --- |
-| ChatGPT Standard/Dev | ChatGPT (GPT-3.5, GPT-4) | Drive: 'ChatGPT-AutoExpert' | Original Expert Persona Induction & Verbosity Dialing (V=0-3) | File |
+| AutoExpert Standard/Dev | AutoExpert (GPT-3.5, GPT-4) | Drive: 'AutoExpert-AutoExpert' | Original Expert Persona Induction & Verbosity Dialing (V=0-3) | File |
 | Gemini Native Port | Gemini 1.5 Pro | Drive: 'gemini-autoexpert-REV1' | Optimization for Gemini's reasoning patterns and native tool use | File |
 | REV1 (May 2026) | Gemini 1.5 Pro / 2.0 | Drive: 'gemini-autoexpert-REV1' | Large context window optimization and enhanced state management | File |
 | Universal Edition | Multi-model (GPT-4o, Gemini 2.0) | Drive: 'AutoExpert System Prompts Repository' | Cross-platform compatibility and V=1-5 Verbosity scaling | File |
@@ -100,7 +100,7 @@ Memory Serialization: Formatting session data for easy storage and retrieval in 
 ## Cross-Version Comparison Matrix
 
 
-| Feature | ChatGPT Standard/Dev | Gemini REV1 | Universal Edition |
+| Feature | AutoExpert Standard/Dev | Gemini REV1 | Universal Edition |
 | --- | --- | --- | --- |
 | Optimized Models | GPT-3.5, GPT-4 | Gemini 1.5 Pro, 2.0 | GPT-4o, Gemini 2.0, Claude |
 | Context Handling | Standard Context | Ultra-Large Context | Hybrid Context Management |
@@ -114,7 +114,7 @@ Memory Serialization: Formatting session data for easy storage and retrieval in 
 
 The following sources contain the core logic, preambles, and configuration files for the various iterations of the framework.
 
-Google Drive: 'ChatGPT-AutoExpert'
+Google Drive: 'AutoExpert-AutoExpert'
 
 Contains the original Standard and Developer Edition .txt and .md instruction files.
 

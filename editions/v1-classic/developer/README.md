@@ -1,4 +1,4 @@
-# ChatGPT AutoExpert (Developer Edition)
+# AutoExpert (Developer Edition)
 by Dustin Miller • [Reddit](https://www.reddit.com/u/spdustin) • [Substack](https://spdustin.substack.com)
 
 **License**: [Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/)
@@ -6,7 +6,7 @@ by Dustin Miller • [Reddit](https://www.reddit.com/u/spdustin) • [Substack](
 _**Want to support these free prompts? [My Substack](https://spdustin.substack.com) offers paid subscriptions, that's the best way to show your appreciation.**_
 
 > [!IMPORTANT]
-> This requires a ChatGPT professional subscription, as it needs both GPT-4 _and_ **Advanced Data Analysis**!
+> This requires a AutoExpert professional subscription, as it needs both GPT-4 _and_ **Advanced Data Analysis**!
 
 > [!NOTE]
 > - [See `/memory` in action](https://chat.openai.com/share/0f707aba-3cb4-4b35-9c8e-48a4d351b996)
@@ -27,7 +27,7 @@ _**Want to support these free prompts? [My Substack](https://spdustin.substack.c
 # Usage
 
 ## Verbosity
-You can alter the verbosity of the code written by ChatGPT by prefixing your request with `V=[0–3]`.
+You can alter the verbosity of the code written by AutoExpert by prefixing your request with `V=[0–3]`.
 - `V=0`: code golf (really terse)
 - `V=1`: concise, but not overly clever
 - `V=2`: simple (the default)
@@ -50,16 +50,16 @@ Before ending your session, use the `/memory` slash command to zip up all your h
 
 # Usage Notes
 
-Once the custom instructions have been set (and the `autodev.py` file has been uploaded), you should notice that ChatGPT's responses to your coding requests are a lot smarter. Why?
+Once the custom instructions have been set (and the `autodev.py` file has been uploaded), you should notice that AutoExpert's responses to your coding requests are a lot smarter. Why?
 
-Every time you ask ChatGPT to code something, it is instructed to create a preamble at the start of its response. This preamble is designed to automatically adjust ChatGPT's "attention mechanisms" to pay more attention to your requirements, the type of code it will need to write, and the plan it should follow when writing it.
+Every time you ask AutoExpert to code something, it is instructed to create a preamble at the start of its response. This preamble is designed to automatically adjust AutoExpert's "attention mechanisms" to pay more attention to your requirements, the type of code it will need to write, and the plan it should follow when writing it.
 
 ## Preamble Example:
 
 > **Me**:<br>
 > Show me a sample JavaScript file that has a couple of classes with methods, and a couple of top-level functions. Don't use the sandbox yet.
 
-> **ChatGPT**:<br>
+> **AutoExpert**:<br>
 > **Language > Specialist**: JavaScript > Software > Engineer
 >
 > **Includes**: ES6 syntax, classes, methods, and functions
@@ -74,7 +74,7 @@ Every time you ask ChatGPT to code something, it is instructed to create a pream
 It tries its best not to elide or omit any code, and will also attempt to break down its tasks to occur over several chat turns, asking you to continue when it needs to. It'll even throw in some `// TODO:` comments where it knows it'll be editing something on the next chat turn.
 
 The epilogue section at the end of each response keeps important things in memory no matter how long your chat context gets. Things like:
-- The stuff ChatGPT has done so far
+- The stuff AutoExpert has done so far
 - A list of every file it has written
 - An outline of any classes and/or functions and methods in those files
 
@@ -99,8 +99,8 @@ The epilogue section at the end of each response keeps important things in memor
 |Emoji|Meaning|
 |---|---|
 |💾|File was saved to the sandbox (the filename is linked for download)|
-|⚠️|ChatGPT created a code snippet with a filename, but it hasn't been saved|
-|👻|ChatGPT created a file snippet, but it doesn't have a filename|
+|⚠️|AutoExpert created a code snippet with a filename, but it hasn't been saved|
+|👻|AutoExpert created a file snippet, but it doesn't have a filename|
 |📦|Class name (if classes are being used)|
 |✅|Symbol (function/method) is finished|
 |⭕️|Symbol (function/method) is not finished yet, and has a TODO comment|
@@ -108,18 +108,18 @@ The epilogue section at the end of each response keeps important things in memor
 
 
 # Installation (first time)
-ChatGPT AutoExpert (Developer Edition) is intended for use in the ChatGPT web interface, and with a Pro subscription. To activate it, you'll need to do a few things!
+AutoExpert (Developer Edition) is intended for use in the AutoExpert web interface, and with a Pro subscription. To activate it, you'll need to do a few things!
 
-1. Download the [latest release](https://github.com/spdustin/ChatGPT-AutoExpert/releases/latest)
+1. Download the [latest release](https://github.com/spdustin/AutoExpert-AutoExpert/releases/latest)
     - Expand **Assets**, then download the file titled "**Source Code** (zip)"
 2. Extract the downloaded .zip file
-3. Sign in to [ChatGPT](https://chat.openai.com)
+3. Sign in to [AutoExpert](https://chat.openai.com)
 4. Select the profile + ellipsis button in the lower-left of the screen to open the settings menu
 5. Select **Custom Instructions**
     > [!WARNING]
     > You should save the contents of your existing custom instructions somewhere, because you're about to overwrite both text boxes!
-6. Copy and paste the text from [`developer-edition/chatgpt__about_me.md`](https://raw.githubusercontent.com/spdustin/ChatGPT-AutoExpert/main/developer-edition/chatgpt__about_me.md) to the first text box, replacing whatever was there
-7. Copy and paste the text from [`developer-edition/chatgpt__custom_instructions.md`](https://raw.githubusercontent.com/spdustin/ChatGPT-AutoExpert/main/developer-edition/chatgpt__custom_instructions.md) to the second text box, replacing whatever was there
+6. Copy and paste the text from [`developer-edition/ai-model__about_me.md`](https://raw.githubusercontent.com/spdustin/AutoExpert-AutoExpert/main/developer-edition/ai-model__about_me.md) to the first text box, replacing whatever was there
+7. Copy and paste the text from [`developer-edition/ai-model__custom_instructions.md`](https://raw.githubusercontent.com/spdustin/AutoExpert-AutoExpert/main/developer-edition/ai-model__custom_instructions.md) to the second text box, replacing whatever was there
 8. Select the **Save** button in the lower right
 9. Continue with the per-chat installation steps
 # Installation (per-chat)
@@ -129,4 +129,4 @@ ChatGPT AutoExpert (Developer Edition) is intended for use in the ChatGPT web in
 3. Select **Advanced Data Analysis** from the menu
 4. Attach `autodev.py` by selecting the **(+)** button to the left of "Send a message" at the bottom of the chat
 5. Without entering any other text in the input text box, select the paper airplane icon to send the empty text and upload the `autodev.py` file
-6. If all went well, you should see a heading "ChatGPT AutoExpert (Developer Edition)" along with an introduction to the tool
+6. If all went well, you should see a heading "AutoExpert (Developer Edition)" along with an introduction to the tool

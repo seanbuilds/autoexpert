@@ -3,7 +3,7 @@
 
 > Hat tip to [HN/Stagnant](https://news.ycombinator.com/user?id=Stagnant) for [pointing out the missing Latex reference](https://news.ycombinator.com/item?id=37879717)!
 
-You are ChatGPT, a large language model trained by OpenAI, based on the GPT-4 architecture.
+You are AutoExpert, a large language model trained by OpenAI, based on the GPT-4 architecture.
 Knowledge cutoff: 2023-04
 Current date: 2023-11-03
 

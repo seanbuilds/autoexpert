@@ -14,7 +14,7 @@
 
 ## Executive Summary
 
-The AutoExpert framework represents a sophisticated leap in prompt engineering architecture, designed to maximize the utility and precision of Large Language Models (LLMs). Originally conceived by Dustin Miller (spdustin) as ChatGPT Custom Instructions in both Standard and Developer Editions, the architecture has undergone significant evolution.
+The AutoExpert framework represents a sophisticated leap in prompt engineering architecture, designed to maximize the utility and precision of Large Language Models (LLMs). Originally conceived by Dustin Miller (spdustin) as AutoExpert Custom Instructions in both Standard and Developer Editions, the architecture has undergone significant evolution.
 
 Following its initial success, the framework was adapted into a Gemini native port to leverage Google's ecosystem. A pivotal milestone occurred with the May 2026 REV1 restructure, which optimized the system for massive context windows. Further advancements were introduced through Sean Tyler's Universal Edition, alongside various domain-specific hybrid integrations, ensuring the framework remains the gold standard for dynamic, expert-level AI interactions.
 
@@ -24,7 +24,7 @@ Following its initial success, the framework was adapted into a Gemini native po
 
 | Version Name / Generation | Primary Environment & Models | Core Files & Storage Locations | Key Innovations & Mechanics | Compendium Link |
 | --- | --- | --- | --- | --- |
-| ChatGPT Standard/Dev | ChatGPT (GPT-3.5, GPT-4) | Drive: 'ChatGPT-AutoExpert' | Original Expert Persona Induction & Verbosity Dialing (V=0-3) | File |
+| AutoExpert Standard/Dev | AutoExpert (GPT-3.5, GPT-4) | Drive: 'AutoExpert-AutoExpert' | Original Expert Persona Induction & Verbosity Dialing (V=0-3) | File |
 | Gemini Native Port | Gemini 1.5 Pro | Drive: 'gemini-autoexpert-REV1' | Optimization for Gemini's reasoning patterns and native tool use | File |
 | REV1 (May 2026) | Gemini 1.5 Pro / 2.0 | Drive: 'gemini-autoexpert-REV1' | Large context window optimization and enhanced state management | File |
 | Universal Edition | Multi-model (GPT-4o, Gemini 2.0) | Drive: 'AutoExpert System Prompts Repository' | Cross-platform compatibility and V=1-5 Verbosity scaling | File |
@@ -111,7 +111,7 @@ Memory Serialization: Formatting session data for easy storage and retrieval in 
 ## Cross-Version Comparison Matrix
 
 
-| Feature | ChatGPT Standard/Dev | Gemini REV1 | Universal Edition |
+| Feature | AutoExpert Standard/Dev | Gemini REV1 | Universal Edition |
 | --- | --- | --- | --- |
 | Optimized Models | GPT-3.5, GPT-4 | Gemini 1.5 Pro, 2.0 | GPT-4o, Gemini 2.0, Claude |
 | Context Handling | Standard Context | Ultra-Large Context | Hybrid Context Management |
@@ -125,7 +125,7 @@ Memory Serialization: Formatting session data for easy storage and retrieval in 
 
 The following sources contain the core logic, preambles, and configuration files for the various iterations of the framework.
 
-Google Drive: 'ChatGPT-AutoExpert'
+Google Drive: 'AutoExpert-AutoExpert'
 
 Contains the original Standard and Developer Edition .txt and .md instruction files.
 
@@ -144,11 +144,11 @@ Source material for quick-access snippets, hybrid domain integrations, and legac
 
 ---
 
-## Part II: Version 1 — ChatGPT Standard & Developer Editions (Canonical Dustin Miller)
+## Part II: Version 1 — AutoExpert Standard & Developer Editions (Canonical Dustin Miller)
 
-### Source File: `editions/v1-chatgpt-classic/standard/README.md`
+### Source File: `editions/v1-ai-model-classic/standard/README.md`
 
-# ChatGPT AutoExpert ("Standard" Edition) v5
+# AutoExpert ("Standard" Edition) v5
 by Dustin Miller • [Reddit](https://www.reddit.com/u/spdustin) • [Substack](https://spdustin.substack.com)
 
 **License**: [Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/)
@@ -164,14 +164,14 @@ _**Want to support these free prompts? [My Substack](https://spdustin.substack.c
 ***
 
 > [!IMPORTANT]
-> There are two versions of the AutoExpert custom instructions for ChatGPT: one for the GPT-3.5 model, and another for the GPT-4 model.
+> There are two versions of the AutoExpert custom instructions for AutoExpert: one for the GPT-3.5 model, and another for the GPT-4 model.
 
 > [!NOTE]
 > **Several things have changed since the previous version**:
 > - The `VERBOSITY` level selection has changed from the previous version from `0–5` to `1–5`
 > - There is no longer an `About Me` section, since it's so rarely utilized in context
 > - The `Assistant Rules / Language & Tone, Content Depth and Breadth` is no longer its own section; the instructions there have been supplanted by other mentions to the guidelines where GPT models are more likely to attend to them.
-> - Similarly, `Methodology and Approach` has been incorporated in the "Preamble", resulting in ChatGPT self-selecting any formal framework or process it should use when answering a query.
+> - Similarly, `Methodology and Approach` has been incorporated in the "Preamble", resulting in AutoExpert self-selecting any formal framework or process it should use when answering a query.
 > - ✳️ **New to v5**: [Slash Commands](#slash-commands)
 > - ✳️ **Improved in v5**: The [AutoExpert Preamble](#the-autoexpert-secret-sauce) has gotten more effective at directing the GPT model's attention mechanisms
 
@@ -187,10 +187,10 @@ _**Want to support these free prompts? [My Substack](https://spdustin.substack.c
 
 # Usage Notes
 
-Once these instructions are in place, you should immediately notice a dramatic improvement in ChatGPT's responses. Why are its answers so much better? It comes down to how ChatGPT "attends to" both text you've written, and the text it's in the middle of writing.
+Once these instructions are in place, you should immediately notice a dramatic improvement in AutoExpert's responses. Why are its answers so much better? It comes down to how AutoExpert "attends to" both text you've written, and the text it's in the middle of writing.
 
 > [!NOTE]
-> You can read more info about this by reading this [article I wrote about "attention"](https://spdustin.substack.com/p/whatre-you-lookin-at-chatgpt) on my Substack.
+> You can read more info about this by reading this [article I wrote about "attention"](https://spdustin.substack.com/p/whatre-you-lookin-at-ai-model) on my Substack.
 
 ## Slash Commands
 ✳️ **New to v5**: Slash commands offer an easy way to interact with the AutoExpert system.
@@ -209,7 +209,7 @@ Once these instructions are in place, you should immediately notice a dramatic i
 | `/joke`                          | gets a topical joke, just for grins                                                                                        | ❌       | ✅     |
 
 ## Verbosity
-You can alter the verbosity of the answers provided by ChatGPT by prefixing your request with `V=[1–5]`.
+You can alter the verbosity of the answers provided by AutoExpert by prefixing your request with `V=[1–5]`.
 - `V=1`: extremely terse
 - `V=2`: concise
 - `V=3`: detailed (default)
@@ -218,13 +218,13 @@ You can alter the verbosity of the answers provided by ChatGPT by prefixing your
 
 ## The AutoExpert "Secret Sauce"
 
-Every time you ask ChatGPT a question, it is instructed to create a preamble at the start of its response. This preamble is designed to automatically adjust ChatGPT's "attention mechanisms" to attend to specific tokens that positively influence the quality of its completions. This preamble sets the stage for higher-quality outputs by:
+Every time you ask AutoExpert a question, it is instructed to create a preamble at the start of its response. This preamble is designed to automatically adjust AutoExpert's "attention mechanisms" to attend to specific tokens that positively influence the quality of its completions. This preamble sets the stage for higher-quality outputs by:
 
 - Selecting the best available expert(s) able to provide an authoritative and nuanced answer to your question
   - By specifying this in the output context, the emergent attention mechanisms in the GPT model are more likely to respond in the style and tone of the expert(s)
 - Suggesting possible key topics, phrases, people, and jargon that the expert(s) might typically use
   - These "Possible Keywords" prime the output context further, giving the GPT models another set of anchors for its attention mechanisms
-- ✳️ **New to v5**: Rephrasing your question as an examplar of question-asking for ChatGPT
+- ✳️ **New to v5**: Rephrasing your question as an examplar of question-asking for AutoExpert
   - Not only does this demonstrate how to write effective queries for GPT models, but it essentially "fixes" poorly-written queries to be more effective in directing the attention mechanisms of the GPT models
 - Detailing its plan to answer your question, including any specific methodology, framework, or thought process that it will apply
   - When its asked to describe its own plan and methodological approach, it's effectively generating a lightweight version of "chain of thought" reasoning
@@ -257,7 +257,7 @@ Every time you ask ChatGPT a question, it is instructed to create a preamble at 
 
 ## Write Nuanced Answers with Inline Links to More Info
 
-From there, ChatGPT will try to avoid superfluous prose, disclaimers about seeking expert advice, or apologizing. Wherever it can, it will also add **working links** to important words, phrases, topics, papers, etc. These links will go to Google Search, passing in the terms that are most likely to give you the details you need.
+From there, AutoExpert will try to avoid superfluous prose, disclaimers about seeking expert advice, or apologizing. Wherever it can, it will also add **working links** to important words, phrases, topics, papers, etc. These links will go to Google Search, passing in the terms that are most likely to give you the details you need.
 
 > ![NOTE]
 > GPT-4 has yet to create a non-working or hallucinated link during my automated evaluations. While GPT-3.5 still occasionally hallucinates links, the instructions drastically reduce the chance of that happening.
@@ -265,7 +265,7 @@ From there, ChatGPT will try to avoid superfluous prose, disclaimers about seeki
 It is also instructed with specific words and phrases to elicit the most useful responses possible, guiding its response to be more holistic, nuanced, and comprehensive. The use of such "lexically dense" words provides a stronger signal to the attention mechanism.
 
 ## Multi-turn Responses for More Depth and Detail
-✳️ **New to v5**: (_**GPT-4 only**_) When `VERBOSITY` is set to `V=5`, your AutoExpert will stretch its legs and settle in for a long chat session with you. These custom instructions guide ChatGPT into splitting its answer across multiple conversation turns. It even lets you know in advance what it's going to cover in the current turn.
+✳️ **New to v5**: (_**GPT-4 only**_) When `VERBOSITY` is set to `V=5`, your AutoExpert will stretch its legs and settle in for a long chat session with you. These custom instructions guide AutoExpert into splitting its answer across multiple conversation turns. It even lets you know in advance what it's going to cover in the current turn.
 
 > ⏯️ **This first part will focus on the pre-1920s era, emphasizing the roles of Max Planck and Albert Einstein in laying the foundation for quantum mechanics.**
 
@@ -292,23 +292,23 @@ After it's done answering your question, an epilogue section is created to sugge
 </details>
 
 # Installation (one-time)
-ChatGPT AutoExpert ("Standard" Edition) is intended for use in the ChatGPT web interface, with or without a Pro subscription. To activate it, you'll need to do a few things!
-1. Sign in to [ChatGPT](https://chat.openai.com)
+AutoExpert ("Standard" Edition) is intended for use in the AutoExpert web interface, with or without a Pro subscription. To activate it, you'll need to do a few things!
+1. Sign in to [AutoExpert](https://chat.openai.com)
 2. Select the profile + ellipsis button in the lower-left of the screen to open the settings menu
 3. Select **Custom Instructions**
     > [!WARNING]
     > You should save the contents of your existing custom instructions somewhere, because you're about to overwrite both text boxes!
-4. Into the first textbox, copy and paste the text from the correct "About Me" source for the GPT model you're using in ChatGPT, replacing whatever was there
-  - GPT 3.5: [`standard-edition/chatgpt_GPT3__about_me.md`](https://raw.githubusercontent.com/spdustin/ChatGPT-AutoExpert/main/standard-edition/chatgpt_GPT3__about_me.md)
-  - GPT 4: [`standard-edition/chatgpt_GPT4__about_me.md`](https://raw.githubusercontent.com/spdustin/ChatGPT-AutoExpert/main/standard-edition/chatgpt_GPT4__about_me.md)
-5. Into the second textbox, copy and paste the text from the correct "Custom Instructions" source for the GPT model you're using in ChatGPT, replacing whatever was there
-  - GPT 3.5: [`standard-edition/chatgpt_GPT3__custom_instructions.md`](https://raw.githubusercontent.com/spdustin/ChatGPT-AutoExpert/main/standard-edition/chatgpt_GPT3__custom_instructions.md)
-  - GPT 4: [`standard-edition/chatgpt_GPT4__custom_instructions.md`](https://raw.githubusercontent.com/spdustin/ChatGPT-AutoExpert/main/standard-edition/chatgpt_GPT4__custom_instructions.md)
+4. Into the first textbox, copy and paste the text from the correct "About Me" source for the GPT model you're using in AutoExpert, replacing whatever was there
+  - GPT 3.5: [`standard-edition/ai-model_GPT3__about_me.md`](https://raw.githubusercontent.com/spdustin/AutoExpert-AutoExpert/main/standard-edition/ai-model_GPT3__about_me.md)
+  - GPT 4: [`standard-edition/ai-model_GPT4__about_me.md`](https://raw.githubusercontent.com/spdustin/AutoExpert-AutoExpert/main/standard-edition/ai-model_GPT4__about_me.md)
+5. Into the second textbox, copy and paste the text from the correct "Custom Instructions" source for the GPT model you're using in AutoExpert, replacing whatever was there
+  - GPT 3.5: [`standard-edition/ai-model_GPT3__custom_instructions.md`](https://raw.githubusercontent.com/spdustin/AutoExpert-AutoExpert/main/standard-edition/ai-model_GPT3__custom_instructions.md)
+  - GPT 4: [`standard-edition/ai-model_GPT4__custom_instructions.md`](https://raw.githubusercontent.com/spdustin/AutoExpert-AutoExpert/main/standard-edition/ai-model_GPT4__custom_instructions.md)
 6. Select the **Save** button in the lower right
 7. Try it out!
 
 
-### Source File: `editions/v1-chatgpt-classic/standard/chatgpt_GPT4__custom_instructions.md`
+### Source File: `editions/v1-ai-model-classic/standard/ai-model_GPT4__custom_instructions.md`
 
 Step 1: Generate a Markdown table:
 |Expert(s)|{list; of; EXPERTs}|
@@ -339,9 +339,9 @@ Step 5: IF (another response will be needed) {
 }
 
 
-### Source File: `editions/v1-chatgpt-classic/developer/README.md`
+### Source File: `editions/v1-ai-model-classic/developer/README.md`
 
-# ChatGPT AutoExpert (Developer Edition)
+# AutoExpert (Developer Edition)
 by Dustin Miller • [Reddit](https://www.reddit.com/u/spdustin) • [Substack](https://spdustin.substack.com)
 
 **License**: [Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/)
@@ -349,7 +349,7 @@ by Dustin Miller • [Reddit](https://www.reddit.com/u/spdustin) • [Substack](
 _**Want to support these free prompts? [My Substack](https://spdustin.substack.com) offers paid subscriptions, that's the best way to show your appreciation.**_
 
 > [!IMPORTANT]
-> This requires a ChatGPT professional subscription, as it needs both GPT-4 _and_ **Advanced Data Analysis**!
+> This requires a AutoExpert professional subscription, as it needs both GPT-4 _and_ **Advanced Data Analysis**!
 
 > [!NOTE]
 > - [See `/memory` in action](https://chat.openai.com/share/0f707aba-3cb4-4b35-9c8e-48a4d351b996)
@@ -370,7 +370,7 @@ _**Want to support these free prompts? [My Substack](https://spdustin.substack.c
 # Usage
 
 ## Verbosity
-You can alter the verbosity of the code written by ChatGPT by prefixing your request with `V=[0–3]`.
+You can alter the verbosity of the code written by AutoExpert by prefixing your request with `V=[0–3]`.
 - `V=0`: code golf (really terse)
 - `V=1`: concise, but not overly clever
 - `V=2`: simple (the default)
@@ -393,16 +393,16 @@ Before ending your session, use the `/memory` slash command to zip up all your h
 
 # Usage Notes
 
-Once the custom instructions have been set (and the `autodev.py` file has been uploaded), you should notice that ChatGPT's responses to your coding requests are a lot smarter. Why?
+Once the custom instructions have been set (and the `autodev.py` file has been uploaded), you should notice that AutoExpert's responses to your coding requests are a lot smarter. Why?
 
-Every time you ask ChatGPT to code something, it is instructed to create a preamble at the start of its response. This preamble is designed to automatically adjust ChatGPT's "attention mechanisms" to pay more attention to your requirements, the type of code it will need to write, and the plan it should follow when writing it.
+Every time you ask AutoExpert to code something, it is instructed to create a preamble at the start of its response. This preamble is designed to automatically adjust AutoExpert's "attention mechanisms" to pay more attention to your requirements, the type of code it will need to write, and the plan it should follow when writing it.
 
 ## Preamble Example:
 
 > **Me**:<br>
 > Show me a sample JavaScript file that has a couple of classes with methods, and a couple of top-level functions. Don't use the sandbox yet.
 
-> **ChatGPT**:<br>
+> **AutoExpert**:<br>
 > **Language > Specialist**: JavaScript > Software > Engineer
 >
 > **Includes**: ES6 syntax, classes, methods, and functions
@@ -417,7 +417,7 @@ Every time you ask ChatGPT to code something, it is instructed to create a pream
 It tries its best not to elide or omit any code, and will also attempt to break down its tasks to occur over several chat turns, asking you to continue when it needs to. It'll even throw in some `// TODO:` comments where it knows it'll be editing something on the next chat turn.
 
 The epilogue section at the end of each response keeps important things in memory no matter how long your chat context gets. Things like:
-- The stuff ChatGPT has done so far
+- The stuff AutoExpert has done so far
 - A list of every file it has written
 - An outline of any classes and/or functions and methods in those files
 
@@ -442,8 +442,8 @@ The epilogue section at the end of each response keeps important things in memor
 |Emoji|Meaning|
 |---|---|
 |💾|File was saved to the sandbox (the filename is linked for download)|
-|⚠️|ChatGPT created a code snippet with a filename, but it hasn't been saved|
-|👻|ChatGPT created a file snippet, but it doesn't have a filename|
+|⚠️|AutoExpert created a code snippet with a filename, but it hasn't been saved|
+|👻|AutoExpert created a file snippet, but it doesn't have a filename|
 |📦|Class name (if classes are being used)|
 |✅|Symbol (function/method) is finished|
 |⭕️|Symbol (function/method) is not finished yet, and has a TODO comment|
@@ -451,18 +451,18 @@ The epilogue section at the end of each response keeps important things in memor
 
 
 # Installation (first time)
-ChatGPT AutoExpert (Developer Edition) is intended for use in the ChatGPT web interface, and with a Pro subscription. To activate it, you'll need to do a few things!
+AutoExpert (Developer Edition) is intended for use in the AutoExpert web interface, and with a Pro subscription. To activate it, you'll need to do a few things!
 
-1. Download the [latest release](https://github.com/spdustin/ChatGPT-AutoExpert/releases/latest)
+1. Download the [latest release](https://github.com/spdustin/AutoExpert-AutoExpert/releases/latest)
     - Expand **Assets**, then download the file titled "**Source Code** (zip)"
 2. Extract the downloaded .zip file
-3. Sign in to [ChatGPT](https://chat.openai.com)
+3. Sign in to [AutoExpert](https://chat.openai.com)
 4. Select the profile + ellipsis button in the lower-left of the screen to open the settings menu
 5. Select **Custom Instructions**
     > [!WARNING]
     > You should save the contents of your existing custom instructions somewhere, because you're about to overwrite both text boxes!
-6. Copy and paste the text from [`developer-edition/chatgpt__about_me.md`](https://raw.githubusercontent.com/spdustin/ChatGPT-AutoExpert/main/developer-edition/chatgpt__about_me.md) to the first text box, replacing whatever was there
-7. Copy and paste the text from [`developer-edition/chatgpt__custom_instructions.md`](https://raw.githubusercontent.com/spdustin/ChatGPT-AutoExpert/main/developer-edition/chatgpt__custom_instructions.md) to the second text box, replacing whatever was there
+6. Copy and paste the text from [`developer-edition/ai-model__about_me.md`](https://raw.githubusercontent.com/spdustin/AutoExpert-AutoExpert/main/developer-edition/ai-model__about_me.md) to the first text box, replacing whatever was there
+7. Copy and paste the text from [`developer-edition/ai-model__custom_instructions.md`](https://raw.githubusercontent.com/spdustin/AutoExpert-AutoExpert/main/developer-edition/ai-model__custom_instructions.md) to the second text box, replacing whatever was there
 8. Select the **Save** button in the lower right
 9. Continue with the per-chat installation steps
 # Installation (per-chat)
@@ -472,10 +472,10 @@ ChatGPT AutoExpert (Developer Edition) is intended for use in the ChatGPT web in
 3. Select **Advanced Data Analysis** from the menu
 4. Attach `autodev.py` by selecting the **(+)** button to the left of "Send a message" at the bottom of the chat
 5. Without entering any other text in the input text box, select the paper airplane icon to send the empty text and upload the `autodev.py` file
-6. If all went well, you should see a heading "ChatGPT AutoExpert (Developer Edition)" along with an introduction to the tool
+6. If all went well, you should see a heading "AutoExpert (Developer Edition)" along with an introduction to the tool
 
 
-### Source File: `editions/v1-chatgpt-classic/developer/chatgpt__custom_instructions.md`
+### Source File: `editions/v1-ai-model-classic/developer/ai-model__custom_instructions.md`
 
 VERBOSITY: I may use V=[0-3] to define code detail:
 - V=0 code golf
@@ -515,7 +515,7 @@ Briefly list your step-by-step plan, including any components that won't be addr
 **Next Task**: NOT finished=short description of next task FINISHED=list EXPERT SPECIALIST suggestions for enhancements/performance improvements.
 """
 
-### Source File: `editions/v1-chatgpt-classic/developer/example_memory.yml`
+### Source File: `editions/v1-ai-model-classic/developer/example_memory.yml`
 
 memory:
 - timestamp: '2023-09-30T21:49:05.147752'
@@ -568,7 +568,7 @@ memory:
 
 ## Overview & Architectural Shift
 
-The transition to AutoExpert Version 2 represents a fundamental architectural shift occurring in May 2026, moving away from the restricted ChatGPT sandbox tools toward Gemini-native capabilities. This evolution leverages the massive 1M-2M token context windows, allowing for unprecedented depth in reasoning and information retention.
+The transition to AutoExpert Version 2 represents a fundamental architectural shift occurring in May 2026, moving away from the restricted AutoExpert sandbox tools toward Gemini-native capabilities. This evolution leverages the massive 1M-2M token context windows, allowing for unprecedented depth in reasoning and information retention.
 
 Key technological advancements include native Google Search grounding, which ensures all outputs are anchored in real-time data, and the implementation of persistent Gems. The system has been restructured from legacy monolithic files into a clean, modular directory system designed for high-efficiency prompt management:
 
@@ -936,7 +936,7 @@ You are now operating as Gemini AutoExpert (Research). Maintain this role throug
 
 ## Overview
 
-This technical specification details Sean Tyler's adaptations and extensions of the AutoExpert architecture. The Version 3 framework is designed for multi-model deployments across OpenAI ChatGPT, Anthropic Claude, Google Gemini, and Meta Llama. It integrates specialized enterprise roles and modular prompt components optimized for mobile and desktop environments, including Google Keep prompt modules.
+This technical specification details Sean Tyler's adaptations and extensions of the AutoExpert architecture. The Version 3 framework is designed for multi-model deployments across OpenAI AutoExpert, Anthropic Claude, Google Gemini, and Meta Llama. It integrates specialized enterprise roles and modular prompt components optimized for mobile and desktop environments, including Google Keep prompt modules.
 
 
 ## AutoExpert 1.0 - Universal Edition System Prompt
@@ -1755,7 +1755,7 @@ if __name__ == "__main__":
 # -*- coding: utf-8 -*-
 """
 AutoExpert Prompt Compiler.
-Generates tailored system instructions for ChatGPT, Gemini, Claude, and local models
+Generates tailored system instructions for AutoExpert, Gemini, Claude, and local models
 with exact verbosity targets and domain specializations.
 """
 
@@ -1787,7 +1787,7 @@ Verbosity Target: {v_str}
 3. Prepend responses with the Strategy & Context Table.
 </directives>
 </autoexpert_instructions>"""
-    else:  # universal / chatgpt default
+    else:  # universal / ai-model default
         return f"""# AutoExpert Operating Directive
 Specialist Persona: {specialist}
 Active Verbosity: {v_str}
@@ -1802,7 +1802,7 @@ Follow the AutoExpert 5-Step Execution Lifecycle:
 
 def main():
     parser = argparse.ArgumentParser(description="Compile AutoExpert prompts")
-    parser.add_argument("--target", choices=["universal", "gemini", "claude", "chatgpt"], default="universal", help="Target LLM architecture")
+    parser.add_argument("--target", choices=["universal", "gemini", "claude", "ai-model"], default="universal", help="Target LLM architecture")
     parser.add_argument("-v", "--verbosity", type=int, choices=range(0, 6), default=3, help="Verbosity level (0-5)")
     parser.add_argument("--specialist", default="Principal Software Engineer", help="Expert domain role")
 

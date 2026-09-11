@@ -3,7 +3,7 @@
 
 ## Overview
 
-This technical specification details Sean Tyler's adaptations and extensions of the AutoExpert architecture. The Version 3 framework is designed for multi-model deployments across OpenAI ChatGPT, Anthropic Claude, Google Gemini, and Meta Llama. It integrates specialized enterprise roles and modular prompt components optimized for mobile and desktop environments, including Google Keep prompt modules.
+This technical specification details Sean Tyler's adaptations and extensions of the AutoExpert architecture. The Version 3 framework is designed for multi-model deployments across OpenAI AutoExpert, Anthropic Claude, Google Gemini, and Meta Llama. It integrates specialized enterprise roles and modular prompt components optimized for mobile and desktop environments, including Google Keep prompt modules.
 
 
 ## AutoExpert 1.0 - Universal Edition System Prompt

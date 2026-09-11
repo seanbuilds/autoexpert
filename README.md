@@ -28,7 +28,7 @@ Base Large Language Models default to cautious, generic conversational behavior.
 
 | Edition | Primary Target | Highlights | Directory |
 | :--- | :--- | :--- | :--- |
-| **V1: ChatGPT Classic** | GPT-3.5, GPT-4 | Canonical spdustin instructions, `autodev.py`, userscripts | [`editions/v1-chatgpt-classic/`](editions/v1-chatgpt-classic/) |
+| **V1: AutoExpert Classic** | GPT-3.5, GPT-4 | Canonical spdustin instructions, `autodev.py`, userscripts | [`editions/v1-classic/`](editions/v1-classic/) |
 | **V2: Gemini REV1** | Gemini 1.5/2.0 Pro | 1M–2M context optimization, Gems suite, Google grounding | [`editions/v2-gemini-rev1/`](editions/v2-gemini-rev1/) |
 | **V3: Universal Edition** | Multi-Model (Claude, GPT-4o, Gemini) | Strategy & Context Table, model-agnostic directives | [`editions/v3-universal/`](editions/v3-universal/) |
 | **Agent Skill** | Google Antigravity, Open Interpreter | Autonomous tool use and runbook workflows | [`skills/autoexpert/`](skills/autoexpert/) |
@@ -38,7 +38,7 @@ Base Large Language Models default to cautious, generic conversational behavior.
 ## ⚡️ Quick Start
 
 ### 1. Universal System Prompt
-To use AutoExpert in any AI chat interface (ChatGPT, Claude, Gemini, Cursor, LibreChat), copy the prompt from [`editions/v3-universal/system-prompt.md`](editions/v3-universal/system-prompt.md) into your system instructions.
+To use AutoExpert in any AI chat interface (OpenAI, Anthropic Claude, Google Gemini, Cursor, LibreChat), copy the prompt from [`editions/v3-universal/system-prompt.md`](editions/v3-universal/system-prompt.md) into your system instructions.
 
 ### 2. Verbosity Dialing Cheat Sheet
 Prefix your queries with `V=[0-5]`:

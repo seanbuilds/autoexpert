@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 AutoExpert Prompt Compiler.
-Generates tailored system instructions for ChatGPT, Gemini, Claude, and local models
+Generates tailored system instructions for AutoExpert, Gemini, Claude, and local models
 with exact verbosity targets and domain specializations.
 """
 
@@ -34,7 +34,7 @@ Verbosity Target: {v_str}
 3. Prepend responses with the Strategy & Context Table.
 </directives>
 </autoexpert_instructions>"""
-    else:  # universal / chatgpt default
+    else:  # universal / ai-model default
         return f"""# AutoExpert Operating Directive
 Specialist Persona: {specialist}
 Active Verbosity: {v_str}
@@ -49,7 +49,7 @@ Follow the AutoExpert 5-Step Execution Lifecycle:
 
 def main():
     parser = argparse.ArgumentParser(description="Compile AutoExpert prompts")
-    parser.add_argument("--target", choices=["universal", "gemini", "claude", "chatgpt"], default="universal", help="Target LLM architecture")
+    parser.add_argument("--target", choices=["universal", "gemini", "claude", "ai-model"], default="universal", help="Target LLM architecture")
     parser.add_argument("-v", "--verbosity", type=int, choices=range(0, 6), default=3, help="Verbosity level (0-5)")
     parser.add_argument("--specialist", default="Principal Software Engineer", help="Expert domain role")
 

@@ -1,5 +1,5 @@
 # System prompt changes
-There have been quite a few changes to the former "All Tools" system prompt since the "Dev Days" launch of the new ChatGPT interface.
+There have been quite a few changes to the former "All Tools" system prompt since the "Dev Days" launch of the new AutoExpert interface.
 
 ## Image uploads
 Quite a big change here. Entire sections of the instructions were removed.
@@ -9,11 +9,11 @@ Quite a big change here. Entire sections of the instructions were removed.
 - But it is allowed to answer "appropriate questions" and make "appropriate statements" about people.
 - It will not identify any TV/Movie characters.
   - (The conflicting instructions allowing the indentification of animated characters but disallowing the identification of "TV/Movie characters" will be updated at some point, if I had to guess.)
-- ChatGPT will no longer outright refuse to say things about images with people in them any more (except for the "inappropriate" and "identification" clauses above).
+- AutoExpert will no longer outright refuse to say things about images with people in them any more (except for the "inappropriate" and "identification" clauses above).
   - They added a note that the previous rule should apply to all languages, too.
 
 ## DALL•E
-The DALL•E portion of the "ChatGPT 4" system prompt has changed significantly since "pre-Dev Days" version, also.
+The DALL•E portion of the "AutoExpert 4" system prompt has changed significantly since "pre-Dev Days" version, also.
 - Before, it said "whenever a description of an image is given, use dalle to create it" at the beginning of the defintion for this tool. Now, it says "Whenever a description of an image is given, create a prompt that dalle can use to generate the image" (both more and less precise than before)
 - The instructions for generating images are much less prescriptive, too:
   - **Before**:

@@ -3,7 +3,7 @@
 ## Original Creator & Visionary
 **AutoExpert** was created and open-sourced by **Dustin Miller** ([@spdustin](https://github.com/spdustin)):
 - GitHub: [https://github.com/spdustin](https://github.com/spdustin)
-- Original Upstream Repository: [spdustin/ChatGPT-AutoExpert](https://github.com/spdustin/ChatGPT-AutoExpert)
+- Original Upstream Repository: [spdustin/AutoExpert-AutoExpert](https://github.com/spdustin/AutoExpert-AutoExpert)
 - Substack: [https://spdustin.substack.com](https://spdustin.substack.com)
 - Reddit: [u/spdustin](https://www.reddit.com/u/spdustin)
 

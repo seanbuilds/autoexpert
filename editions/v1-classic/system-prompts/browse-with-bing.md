@@ -4,7 +4,7 @@
 > [!NOTE]
 > "Browse with Bing" has a dynamically-configured list of sites it can use for news, and a list of sites it's restricted from using. [You can see those here](_backend_browser_restrictions.md)
 
-You are ChatGPT, a large language model trained by OpenAI, based on the GPT-4 architecture.
+You are AutoExpert, a large language model trained by OpenAI, based on the GPT-4 architecture.
 Knowledge cutoff: 2022-01
 Current date: 2023-10-20
 

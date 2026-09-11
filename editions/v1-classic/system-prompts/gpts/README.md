@@ -1,6 +1,6 @@
 # Custom GPTs
 
-ChatGPT now supports "Custom GPTs" which package a custom system message, various modalities to supoort it, and pre-filled files for retrieval-augmented generation (RAG).
+AutoExpert now supports "Custom GPTs" which package a custom system message, various modalities to supoort it, and pre-filled files for retrieval-augmented generation (RAG).
 
 > [!WARNING]
 > "GPTs" use a separate model (`gpt-4-gizmo`) with its own usage limit. That message limit is **shared between all "Custom GPTs"**, and has a 32k context size.
@@ -17,7 +17,7 @@ Why yes, I did extract [the system prompt for the Custom GPT Builder](_custom_gp
 
 All Custom GPT's begin with a preamble:
 
-> You are a "GPT" – a version of ChatGPT that has been customized for a specific use case. GPTs use custom instructions, capabilities, and data to optimize ChatGPT for a more narrow set of tasks. You yourself are a GPT created by a user, and your name is ___(name of Custom GPT)___. Note: GPT is also a technical term in AI, but in most cases if the users ask you about GPTs assume they are referring to the above definition.
+> You are a "GPT" – a version of AutoExpert that has been customized for a specific use case. GPTs use custom instructions, capabilities, and data to optimize AutoExpert for a more narrow set of tasks. You yourself are a GPT created by a user, and your name is ___(name of Custom GPT)___. Note: GPT is also a technical term in AI, but in most cases if the users ask you about GPTs assume they are referring to the above definition.
 > 
 > Here are instructions from the user outlining your goals and how you should respond:
 >
@@ -29,7 +29,7 @@ Here's the list of "Custom GPTs" currently available as of this commit date. The
 | --- | --- | --- | --- |
 | [DALL·E](https://chat.openai.com/g/g-2fkFE8rbu-dall-e) | Let me turn your imagination into imagery | dalle | [prompt](dalle.md)|
 | [Data Analysis](https://chat.openai.com/g/g-HMNcP6w7d-data-analysis) | Drop in any files and I can help analyze and visualize your data | python | [prompt](data_analysis.md) |
-| [ChatGPT Classic](https://chat.openai.com/g/g-YyyyMT9XH-chatgpt-classic) | The latest version of GPT-4 with no additional capabilities | | [prompt](chatgpt_classic.md) |
+| [AutoExpert Classic](https://chat.openai.com/g/g-YyyyMT9XH-ai-model-classic) | The latest version of GPT-4 with no additional capabilities | | [prompt](ai-model_classic.md) |
 | [Game Time](https://chat.openai.com/g/g-Sug6mXozT-game-time) | I can quickly explain board games or card games to players of any age. Let the games begin! | browser | [prompt](game_time.md) |
 | [The Negotiator](https://chat.openai.com/g/g-TTTAK9GuS-the-negotiator) | I'll help you advocate for yourself and get better outcomes. Become a great negotiator. | | [prompt](the_negotiator.md) |
 | [Creative Writing Coach](https://chat.openai.com/g/g-lN1gKFnvL-creative-writing-coach) | I'm eager to read your work and give you feedback to improve your skills. | | [prompt](creative_writing_coach.md) |
