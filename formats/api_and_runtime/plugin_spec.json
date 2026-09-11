@@ -1,9 +1,0 @@
-{
-  "name": "autoexpert-plugin",
-  "version": "1.0.0",
-  "description": "AutoExpert framework MCP server for dynamic persona induction, attention-steering preambles, session continuity epilogues, code standards auditing, and slash commands",
-  "keywords": [
-    "mcp",
-    "autoexpert"
-  ]
-}

@@ -24,48 +24,32 @@ Base Large Language Models default to cautious, generic conversational behavior.
 
 ---
 
-## 📚 Editions
-
-### Core Prompts (Use These)
+## 📚 The Two Editions
 
 | Edition | Use For | Highlights | Location |
 | :--- | :--- | :--- | :--- |
 | **Standard** | General questions, research, analysis, multimodal | Strategy & Context Table, V=1–5 verbosity, research evidence mode, data analysis mode, multimodal transcription mode | [`core/standard/`](core/standard/) |
 | **Developer** | Programming, architecture, pair-coding | Pair-Programming Preamble, No-Elision Mandate, V=0–3 code verbosity, Source Tree Epilogue | [`core/developer/`](core/developer/) |
 
-### Heritage Editions (Historical Reference)
-
-| Edition | Original Target | Directory |
-| :--- | :--- | :--- |
-| V1: AutoExpert Classic | GPT-3.5, GPT-4 (canonical spdustin) | [`editions/v1-classic/`](editions/v1-classic/) |
-| V2: Gemini REV1 | Gemini 1.5/2.0 Pro | [`editions/v2-gemini-rev1/`](editions/v2-gemini-rev1/) |
-| Agent Skill | Google Antigravity, Open Interpreter | [`skills/autoexpert/`](skills/autoexpert/) |
+> All legacy editions (V1 Classic, V2 Gemini REV1, specialized variants) have been consolidated into these two prompts. The originals are preserved in [`docs/pre-consolidation-archive.zip`](docs/pre-consolidation-archive.zip).
 
 ## 📁 Repository Structure
 ```text
 .
 |-- core
-|   |-- standard          # ← General questions, research, analysis, multimodal
-|   `-- developer         # ← Programming, architecture, pair-coding
-|-- editions
-|   |-- v1-classic        # Heritage: original spdustin GPT-3.5/4 edition
-|   |-- v2-gemini-rev1    # Heritage: Gemini 1.5/2.0 Pro adaptation
-|   `-- v4-enterprise-hybrid
+|   |-- standard              # ← General use (research, analysis, multimodal, Q&A)
+|   `-- developer             # ← Programming (pair-coding, architecture)
 |-- formats
-|   |-- agent_skills      # Per-agent-framework skill files
-|   |-- api_and_runtime
-|   |-- custom_instructions
-|   |-- gems_and_projects
-|   |-- system_prompts    # Copies of core/ for self-contained distribution
-|   `-- userscripts_and_browser
+|   |-- agent_skills          # Skill files for Antigravity, Claude Code, Open Interpreter
+|   `-- system_prompts        # Portable copies of core/ prompts
 |-- skills
-|   `-- autoexpert        # Antigravity agent skill
-|-- docs                  # Master compendium & omnibus reference
+|   `-- autoexpert            # Antigravity agent skill definition
+|-- docs                      # Master compendium, omnibus reference, legacy archive
 |-- tests
 `-- tools
-    |-- autodev           # CLI: stash, recall, preamble, lint
-    |-- mcp_server        # FastMCP server
-    `-- prompt_compiler   # Multi-model prompt generator
+    |-- autodev               # CLI: stash, recall, preamble, lint
+    |-- mcp_server            # FastMCP server
+    `-- prompt_compiler       # Multi-model prompt generator
 ```
 
 ---
