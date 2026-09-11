@@ -7,6 +7,16 @@
 
 ---
 
+
+## Framework Architecture: Core vs. Specialized Taxonomy
+
+AutoExpert is structured into a clean, modular taxonomy:
+
+
+
+
+---
+
 ## Part I: Master Architecture Index & Foundation Pillars
 
 # AutoExpert Framework: Master Compendium & Architecture Index
